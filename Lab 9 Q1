@@ -1,0 +1,28 @@
+#include <stdio.h>
+void transection(){
+    float limit, amount;
+    printf("Enter the current remaining transection limit:");
+    scanf("%f",&limit);
+    if (limit<5000){
+    printf("\nEnter the amount you wanna withdraw :");
+    scanf("%f",&amount);
+    if(amount <=limit){
+        limit=limit-amount;
+        printf("\nApproved");
+        printf("\nThe remaining limit is %f rs",limit);
+
+    }
+    else{
+        printf("\nRejected.");
+    }
+}
+else {
+    printf("\nRejected.");
+}
+
+}
+
+int main(){
+    transection();
+    return 0;
+}
