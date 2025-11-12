@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void ptrswap(int *ptra,int *ptrb, int *ptrc){
+    int temp=*ptra;
+    *ptra=*ptrb;
+    *ptrb=*ptrc;
+    *ptrc=temp;    
+}
+
+int main() {
+    int a=100,b=200,c=300;
+    int *ptra=&a;
+    int *ptrb=&b;
+    int *ptrc=&c;
+
+    printf("%d\n",*ptra);
+    printf("%d\n",*ptrb);
+    printf("%d\n",*ptrc);
+    
+    ptrswap(ptra,ptrb,ptrc);
+
+    printf("%d\n",*ptra);
+    printf("%d\n",*ptrb);
+    printf("%d\n",*ptrc);
+
+    return 0;
+}
