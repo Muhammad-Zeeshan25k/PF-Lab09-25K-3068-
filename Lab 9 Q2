@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void result(){
+    float marks[3];
+    float sum=0,avg;
+    int flag=1;
+    for (int i=0;i<3;i++){
+    printf("\nEnter Marks or subject %d :",i+1);
+    scanf("%f",&marks[i]);
+    if (marks[i]<50){
+        flag=0;
+    }
+    sum+=marks[i];
+}
+avg=sum/3;
+if (flag && avg>=50){
+printf("\nThe student is passed. Average is %.2f",avg);}
+else {
+    for (int i=0;i<3;i++){
+        if(marks[i]<50)
+        printf("Student failed due to less marks in subject %d ",i+1);
+    }
+
+}
+}
+
+int main() {
+    result();
+    return 0;
+}
