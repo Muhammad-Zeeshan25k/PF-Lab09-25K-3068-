@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+float rentamnt(int days,int kilometers){
+    float extra=0,rent;
+    if (kilometers>100){
+    extra=(float) kilometers-100;
+    extra=extra*0.25;}
+    if(days>7){
+        days=days*40;
+        days=days-(days*0.1);
+    }
+    else{
+    days=days*40;}
+    rent=days+extra;
+
+    return rent;
+}
+
+int main() {
+    int days,kilometers;
+    float rent;
+    printf("Enter Number of Days :");
+    scanf("%d",&days);
+    printf("Enter the distance in Kilometers :");
+    scanf("%d",&kilometers);
+    rent=rentamnt(days,kilometers);
+    printf("The total RENT will be : %.2f",rent);   
+    return 0;
+}
