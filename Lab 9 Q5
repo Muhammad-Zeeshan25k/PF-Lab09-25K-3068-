@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+float totalbill(float fprice,int members){
+    float tip=0.0,total=0.0,service=0.0;
+    if(fprice>50){
+        tip=0.15*fprice;
+    }
+    else {
+        tip=0.1*fprice;
+    }
+    if (members>6){
+        service=0.05*fprice;
+    }
+    
+    total=fprice+tip+service;
+    total*=1.08;
+
+    return total;
+
+}
+
+int main() {
+    float fprice,total;
+    int members;
+    printf("Enter Food Price :");
+    scanf("%f",&fprice);
+    printf("\nEnter the number of Members :");
+    scanf("%d",&members);
+    total=totalbill(fprice,members);
+    printf("The total bill is : %.2f-/pkr",total);
+    return 0;
+}
