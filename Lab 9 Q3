@@ -1,0 +1,24 @@
+#include <stdio.h>
+void temp(){
+    float tmp;
+    printf("Enter the temperature :");
+    scanf("%f",&tmp);
+    if (tmp < 10.0){
+        printf("COLD ALERT!");
+    }
+    else if(tmp>35.0){
+        printf("HEAT ALERT!");
+    }
+    else if (tmp>=15 && tmp<=25){
+        printf("COMFORT ZONE!");
+    }
+    else {
+        printf("NORMAL!");
+    }
+
+}
+
+int main() {
+    temp();
+    return 0;
+}
