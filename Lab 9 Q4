@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+float total() {
+    float weight, cost, tprice;
+
+    printf("Enter the weight of the package in kg: ");
+    scanf("%f", &weight);
+
+    printf("Enter the cost of the package: ");
+    scanf("%f", &cost);
+
+    if (cost < 101) {
+        if (weight < 2) {
+            tprice = cost + 10;
+        } else if (weight >= 2 && weight < 5) {
+            tprice = cost + 15;
+        } else {
+            tprice = cost + 20;
+        }
+    } else {
+        tprice = cost;
+    }
+
+    return tprice;
+}
+
+int main() {
+    float tprice = total();
+    printf("The total cost with shipping is: %.2f\n", tprice);
+    return 0;
+}
